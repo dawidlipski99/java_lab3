@@ -1,46 +1,35 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        /* ćw 2 klasy */
-        /* zad.1
-            a) Stworzyć publiczną klasę Student z 2-ma polami String, 1 polem int i 1 polem boolean,
-            klasa ma się znajdować w osobnym pliku Student.java
-            b) stworzyć 3 objekty klasy student i wstawić je do tablicy
-            c) wyświetlić dane z tablicy, użyć pętli for lub forEach
-            d) dane powinny być estetycznie przedstawione
+
+
+        /* zad.3
+            a) W klasie Main stworzyć 5 różnych studentów, (można za pomocą tego samego objektu)
+            b) dodać studentów do Listy ArrayList,
+            c) przeiterować listę za pomocą pętli forEach wywołując na każdym objekcie metodę toString() (w każdej iteracji);
          */
-        Student[] students = new Student [3];
-        Student students1 = new Student();
-        Student students2 = new Student();
-        Student students3 = new Student();
-        students1.Imię = "Kacper";
-        students1.Nazwisko = "Aleksander";
-        students1.wiek = 22;
-        students1.czykobieta = false;
-        students1.displayInfo();
-        students2.Imię = "Kamila";
-        students2.Nazwisko = "Kowalska";
-        students2.wiek = 23;
-        students2.czykobieta = true;
-        students2.displayInfo();
-        students3.Imię = "Krystian";
-        students3.Nazwisko = "Szczęsny";
-        students3.wiek = 28;
-        students3.czykobieta = false;
-        students3.displayInfo();
 
 
 
-        for (int i = 0;i >= students.length;++i){
-
-            System.out.println(students.length);
-        }
 
 
+                Student st = new Student(new Osoba("Aleksandra","Roman", 14223), WydzialEnum.Rachunkowość);
+                Student st1 = new Student(new Osoba("Kamila","Wojnicka", 16789), WydzialEnum.Programowanie);
+                Student st2 = new Student(new Osoba("Klaudia","Ptaszek", 89711), WydzialEnum.Rachunkowość);
+                Student st3 = new Student(new Osoba("Dawid","Murański", 56789), WydzialEnum.Elktrotechnika);
+                Student st4 = new Student(new Osoba("Grzegorz","Piechowicz", 68954), WydzialEnum.Programowanie);
+
+                ArrayList<Student> students = new <Student>ArrayList();
+                students.add(st);
+                students.add(st1);
+                students.add(st2);
+                students.add(st3);
+                students.add(st4);
+                for(Student st5 : students){
+                    System.out.println(st5.toString());
+                }
 
     }
 }
