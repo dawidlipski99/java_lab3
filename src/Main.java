@@ -1,35 +1,33 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
 
-        /* zad.3
-            a) W klasie Main stworzyć 5 różnych studentów, (można za pomocą tego samego objektu)
-            b) dodać studentów do Listy ArrayList,
-            c) przeiterować listę za pomocą pętli forEach wywołując na każdym objekcie metodę toString() (w każdej iteracji);
+        /* zad.1 Proszę wybrać dowolny temat budowania struktur klas np. samochody, dom, biblioteka, nauka, zabawki, kosmetyki, biuro podróży ... .
+                 Będziemy budować podobną strukturę kodu jak w przykładzie 5,
+            a) Proszę stworzyć układ klas dziedziczących po sobie,
+            b) proszę użyć pól i metod protected jak i private,
+            c) proszę stworzyć konstruktory, metody: toString(), settery i gettery,
+            d) proszę używać super do wywołania konstruktorów i metod z klas nadrzędnych
+            (można wygenerować je --> prawy przycisk myszki --> generate --> settery, gettery, ...),
+            e) w klasie Main proszę stworzyć objekty podobnie jak w przykładzie 5,
+            oraz stworzyć listę typu najbardziej generycznego np. List<Budynek>
          */
+        name car = new name("Mercedes Benz", "1999" );
+        System.out.println(car.toString());
+        Car car2 = new Car("BMW", "1923", 98.9);
+        System.out.println(car.toString());
 
-
-
-
-
-                Student st = new Student(new Osoba("Aleksandra","Roman", 14223), WydzialEnum.Rachunkowość);
-                Student st1 = new Student(new Osoba("Kamila","Wojnicka", 16789), WydzialEnum.Programowanie);
-                Student st2 = new Student(new Osoba("Klaudia","Ptaszek", 89711), WydzialEnum.Rachunkowość);
-                Student st3 = new Student(new Osoba("Dawid","Murański", 56789), WydzialEnum.Elktrotechnika);
-                Student st4 = new Student(new Osoba("Grzegorz","Piechowicz", 68954), WydzialEnum.Programowanie);
-
-                ArrayList<Student> students = new <Student>ArrayList();
-                students.add(st);
-                students.add(st1);
-                students.add(st2);
-                students.add(st3);
-                students.add(st4);
-                for(Student st5 : students){
-                    System.out.println(st5.toString());
-                }
-
+        List<name> Cars = new ArrayList<>();
+        Cars.add(car);
+        Cars.add(car2);
+        System.out.println(Cars);
+        Object car3 = new name("Fiat", "1899" );
+        System.out.println("\n" +car3.toString());
+        Object car4 = new name("Opel", "1862");
+        System.out.println("\n" +car4.toString());
     }
 }
