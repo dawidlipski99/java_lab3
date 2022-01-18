@@ -1,46 +1,54 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        /* ćw 2 klasy */
-        /* zad.1
-            a) Stworzyć publiczną klasę Student z 2-ma polami String, 1 polem int i 1 polem boolean,
-            klasa ma się znajdować w osobnym pliku Student.java
-            b) stworzyć 3 objekty klasy student i wstawić je do tablicy
-            c) wyświetlić dane z tablicy, użyć pętli for lub forEach
-            d) dane powinny być estetycznie przedstawione
-         */
-        Student[] students = new Student [3];
-        Student students1 = new Student();
-        Student students2 = new Student();
-        Student students3 = new Student();
-        students1.Imię = "Kacper";
-        students1.Nazwisko = "Aleksander";
-        students1.wiek = 22;
-        students1.czykobieta = false;
-        students1.displayInfo();
-        students2.Imię = "Kamila";
-        students2.Nazwisko = "Kowalska";
-        students2.wiek = 23;
-        students2.czykobieta = true;
-        students2.displayInfo();
-        students3.Imię = "Krystian";
-        students3.Nazwisko = "Szczęsny";
-        students3.wiek = 28;
-        students3.czykobieta = false;
-        students3.displayInfo();
+
+        /* ćw 3 klasy */
+
+        /*  zad.1 - Najpierw należy uzupełnić kod w klasie Punkt.java,
+            a) stworzyć objekt punktA typu Punkt,
+            w konstruktorze zainicjować zmienną pX --> np. new Punkt(7), wykonać metodę punktA.toString();
+            b) następnie ponownie wywopać konstruktor inicjalizujący wszystkie pola z klasy
+            --> np. punkt = new Punkt(1, 2, 3);, wykonać metodę punktA.toString();
+            c) nadpisać wartości pól z objektu punktA za pomocą setterów i
+            ponownie wywołać metodę toString();
+            d) wypisać wartości pól (za pomocą getterów),
+            e) wywołać metody suma i róznica (obie wersje) z klasy punkt
+        */
+        Punkt punktA = new Punkt(9);
+        System.out.println(punktA.toString());
+        Punkt punkt = new Punkt(1, 8, 9);
+        System.out.println(punkt.toString());
+        punktA.setpY(2);
+        System.out.println(punktA.toString());
+        punktA.getpX();
+        punktA.getpZ();
+        punkt.getpX();
+        punkt.getpZ();
 
 
+        punkt.wynik();
 
-        for (int i = 0;i >= students.length;++i){
+         /* stworzyć
+        a) pusty konstruktor,
+        b) konstruktor inicjalizujacy zmienną pX,
+        c) konstruktor inicjalizujący wszystkie zmienne,
+        d) stworzyć settery i gettery,
+        e) getter do zmiennej pZ niech zwraca return pZ * 10;
+        podpowiedz ALT + INSERT można wybrać generowanie automatyczne
+        konstruktora, getterów, setterów, nadpisywanie metody toString() i inne ...
+    */
 
-            System.out.println(students.length);
-        }
-
-
+    /* Stworzyć metody
+        a) suma - sumująca wszystkie wartości w klasie
+        b) różnica - metody przeciążone roznica(){} i roznica(int x, int y, int z){}
+        c) metody różnica mają wykonwywać dzialania :
+            roznica(){ return pX - pY - pZ} i roznica(int x, int y, int z){ return pX*x - pY*y - pZ*z }
+        d) nadpisać metodę toString(), aby zwracała wszystkie wartości pól, analogicznie jak w przykładzie
+     */
 
     }
 }
